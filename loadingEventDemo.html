@@ -23,24 +23,30 @@
 			var count = multiImg.length;
 			for(var i = 0; i < count; i++){
 				img[i] = new Image();
-				img[i].style.width = '200px';
-				img[i].style.height = '200px';
-				img[i].style.borderRadius = '50%';
-				img[i].style.display = 'inline-block';
 				img[i].addEventListener('load', function(){
 					flag++;
 					console.log(flag);
 					if(flag == count){
 						var pp = document.getElementsByClassName('circlesload')[0];
 						pp.style.display = 'none';
-						parent.appendChild(img[0]);
-						parent.appendChild(img[1]);
-						parent.appendChild(img[2]);
+						for(var ii = 0; ii < count; ii++){
+							var di = document.createElement('div');
+							$('#btn')[0].style.display = 'none';
+							di.style.display = 'inline-block';
+							di.className = 'myimage';
+							di.style.width = '200px';
+							di.style.height = '200px';
+							di.style.backgroundImage = 'url('+multiImg[ii]+')';
+							di.style.borderRadius = '50%';
+							di.style.backgroundRepeat = 'no-repeat';
+							di.style.backgroundSize = 'cover';
+							parent.appendChild(di);
+						}
 					}
 				},false);
 				img[i].src = multiImg[i];
-				
 			}
+			
 		}
 	</script>
 </head>
