@@ -1,0 +1,141 @@
+@keyframes circleloading {
+    from {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes lineloading {
+	0%， 
+	100% {
+		background: lightgreen;
+	}
+	50% {
+		transform: scaleY(1.75);
+		background: lightblue;
+	}
+}
+
+@keyframes circlesloading {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(.3);
+		opacity: .5;
+	}
+}
+
+.circleload {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	margin: 60px auto;
+	border: 10px solid rgba(0, 0, 0, 0.2);
+	border-top-color: black;
+	animation: circleloading 2s ease 10;
+	
+}
+
+.lineload {
+	width: 60px;
+	display: flex;
+	justify-content: space-between;
+	margin: 100px auto;
+}
+
+.lineload .lines {
+	width: 8px;
+	height: 40px;
+	border-radius: 4px;
+	background: lightgreen;
+	animation: lineloading 1.8s ease 5;
+}
+
+.lineload .lines:nth-child(2) {
+	animation-delay: .2s;
+}
+
+.lineload .lines:nth-child(3) {
+	animation-delay: .4s;
+}
+
+.lineload .lines:nth-child(4) {
+	animation-delay: .6s;
+}
+
+.lineload .lines:nth-child(5) {
+	animation-delay: .8s;
+}
+
+.circlesload {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+.circlesload .point {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: lightgreen;
+	position: absolute;
+	animation: circlesloading 2s infinite;
+}
+
+.circlesload .point:nth-child(1) {
+	left: 0;
+	top: 50%;
+	margin-top: -10px;
+	animation-delay: .13s;
+}
+
+.circlesload .point:nth-child(2) {
+	left: 14px;
+	top: 14px;
+	animation-delay: .26s;
+}
+
+.circlesload .point:nth-child(3) {
+	left: 50%;
+	top: 0;
+	margin-left: -10px;
+	animation-delay: .39s;
+}
+
+.circlesload .point:nth-child(4) {
+	right: 14px;
+	top: 14px;
+	animation-delay: .52s;
+}
+
+.circlesload .point:nth-child(5) {
+	right: 0;
+	top: 50%;
+	margin-top: -10px;
+	animation-delay: .65s;
+}
+
+.circlesload .point:nth-child(6) {
+	right: 14px;
+	bottom: 14px;
+	animation-delay: .78s;
+}
+
+.circlesload .point:nth-child(7) {
+	left: 50%;
+	bottom: 0;
+	margin-left: -10px;
+	animation-delay: .91s;
+}
+
+.circlesload .point:nth-child(8) {
+	left: 14px;
+	bottom: 14px;
+	animation-delay: 1.04s;
+}

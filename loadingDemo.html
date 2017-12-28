@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HelloWorld</title>
+	<link rel="stylesheet" href="./css/index.css">
+	
+	<!-- //加载动画js -->
+	<script src="./js/LoadAnimation.js"></script>
+	<script text="text/javascript">
+		var index = 0;
+		function Load(){
+			var result = null;
+			var la = new LoadAnimation();
+			switch(index){
+				case 0:
+					result = la.createRotateLoading();
+					break;
+				case 1:
+					result = la.createPillarLoading();
+					break;
+				case 2:
+					result = la.createPointLoading();
+					break;
+			}
+			var parent = document.querySelector('#container');
+			if(parent != null){
+				parent.appendChild(result);
+			}
+			index++;
+			if(index > 2){
+				index = 0;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<input type="button" onclick="Load()" value="加载">
+		
+	</div>
+</body>
+</html>
