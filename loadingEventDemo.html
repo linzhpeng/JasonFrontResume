@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading event test</title>
+	<script src="./js/LoadAnimation.js"></script>
+	<script src="./js/jquery-1.10.2.min.js"></script>
+	<script>
+	
+		function myloading(){
+			console.log('loading');
+			var la = new LoadAnimation();
+			var parent = document.querySelector('#container');
+			if(parent != null){
+				parent.appendChild(la.createPointLoading());
+			}
+			var img = [], flag = 0, 
+			multiImg = [
+				'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1514452292&di=add8bec9606930b855deca0c72b186a4&src=http://d.hiphotos.baidu.com/zhidao/pic/item/50da81cb39dbb6fd690348820124ab18972b373d.jpg',
+				'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514462383954&di=2a5b4f330367ec36c39919b13ec17481&imgtype=0&src=http%3A%2F%2Fpic.yesky.com%2FuploadImages%2F2012%2F327%2FOVQBDE0B38S8.jpg',
+				'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514462383954&di=07a4b74a01e438e8b9dfb599dd306dea&imgtype=0&src=http%3A%2F%2Fs13.sinaimg.cn%2Fmw690%2F002Yaqefzy6W1x92zQ8cc%26690'
+			];
+			var count = multiImg.length;
+			for(var i = 0; i < count; i++){
+				img[i] = new Image();
+				img[i].style.width = '200px';
+				img[i].style.height = '200px';
+				img[i].style.borderRadius = '50%';
+				img[i].style.display = 'inline-block';
+				img[i].addEventListener('load', function(){
+					flag++;
+					console.log(flag);
+					if(flag == count){
+						var pp = document.getElementsByClassName('circlesload')[0];
+						pp.style.display = 'none';
+						parent.appendChild(img[0]);
+						parent.appendChild(img[1]);
+						parent.appendChild(img[2]);
+					}
+				},false);
+				img[i].src = multiImg[i];
+				
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<input id="btn" type="button" value="加载" onclick="myloading()" >
+	</div>
+</body>
+</html>
