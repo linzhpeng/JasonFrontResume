@@ -1,3 +1,34 @@
 .welcome{
 	color: 'red';
 }
+
+.box {
+	width: 600px;
+	height: 200px;
+	border: 1px solid #ccc;
+	background: white;
+	margin: 20px auto;
+}
+
+.circle {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: blue;
+	margin: 75px 0;
+	transition: all 3.5s 1s;
+}
+
+.box:hover .circle {
+	background: red;
+	transform: translate(550px, 0);
+}
+
+.circle2 {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: blue;
+	margin: 75px 0;
+	animation: 3s ease infinite;
+}

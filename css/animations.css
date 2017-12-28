@@ -24,7 +24,7 @@
 		opacity: 1;
 	}
 	100% {
-		transform: scale(.3);
+		transform: scale(.5);
 		opacity: .5;
 	}
 }
@@ -93,12 +93,14 @@
 	top: 50%;
 	margin-top: -10px;
 	animation-delay: .13s;
+	background: red;
 }
 
 .circlesload .point:nth-child(2) {
 	left: 14px;
 	top: 14px;
 	animation-delay: .26s;
+	background: orange;
 }
 
 .circlesload .point:nth-child(3) {
@@ -106,12 +108,14 @@
 	top: 0;
 	margin-left: -10px;
 	animation-delay: .39s;
+	background: yellow;
 }
 
 .circlesload .point:nth-child(4) {
 	right: 14px;
 	top: 14px;
 	animation-delay: .52s;
+	background: green;
 }
 
 .circlesload .point:nth-child(5) {
@@ -119,12 +123,14 @@
 	top: 50%;
 	margin-top: -10px;
 	animation-delay: .65s;
+	background: blue;
 }
 
 .circlesload .point:nth-child(6) {
 	right: 14px;
 	bottom: 14px;
 	animation-delay: .78s;
+	background: #0c4254;
 }
 
 .circlesload .point:nth-child(7) {
@@ -132,10 +138,12 @@
 	bottom: 0;
 	margin-left: -10px;
 	animation-delay: .91s;
+	background: purple;
 }
 
 .circlesload .point:nth-child(8) {
 	left: 14px;
 	bottom: 14px;
 	animation-delay: 1.04s;
+	background: lightgreen;
 }
