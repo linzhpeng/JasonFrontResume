@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+	</style>
+	
+	<script src="./js/me.js"></script>
+	<script type="text/javascript">
+		onload = function(){
+			<!-- var c = document.getElementById("mycanvas"); -->
+			<!-- c.width = 500; -->
+			<!-- c.height = 500; -->
+			<!-- var ctx = c.getContext("2d"); -->
+			<!-- ctx.fillStyle = 'red'; -->
+			<!-- ctx.fillRect(50,25,100,100); -->
+			<!-- ctx.fillStyle='blue'; -->
+			<!-- ctx.beginPath(); -->
+			<!-- ctx.arc(150,125,50,0,Math.PI*2,true); -->
+			<!-- ctx.closePath(); -->
+			<!-- ctx.fill(); -->
+			var c = document.getElementById("canvas");
+			c.appendChild(CreateMeDiv());
+		}
+	</script>
+</head>
+<body>
+	<canvas id="mycanvas" style="display:none;"></canvas>
+	<div id="canvas"></div>
+</body>
+</html>

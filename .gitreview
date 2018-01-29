@@ -1,0 +1,6 @@
+[gerrit]
+host=https://review.gerrithub.io/
+project=linzhpeng/JasonFrontResume
+defaultbranch=master
+defaultremote=origin
+defaultrebase=0
