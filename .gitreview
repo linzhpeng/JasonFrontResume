@@ -1,6 +1,6 @@
 [gerrit]
 host=https://review.gerrithub.io/
 project=linzhpeng/JasonFrontResume
-defaultbranch=master
+defaultbranch=myResume
 defaultremote=origin
 defaultrebase=0
